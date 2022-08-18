@@ -1,0 +1,67 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+body#player-1 {
+  background-color: hsl(166, 100%, 40%);
+}
+
+body#player-2 {
+  background-color: hsl(0, 100%, 40%);
+}
+
+body#draw {
+  background-color: hsl(0, 0%, 63%);
+}
+
+div.resize-helper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  max-width: 80vh;
+}
+
+div.outer-container {
+  padding: 20px;
+  border-radius: 5%;
+  box-shadow: 0 0 15px 0 #c7c7c7;
+  display: grid;
+  aspect-ratio: 1;
+  width: 100%;
+  max-width: 450px;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 30% 30% 30%;
+  column-gap: 5%;
+  row-gap: 5%;
+  background-color: white;
+}
+
+div.outer-container div {
+  box-shadow: inset 0 0 5px 0 #c7c7c7;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border-radius: 10%;
+  transition: all 0.5s ease-in-out;
+}
+
+div.outer-container div:hover {
+  box-shadow: inset 0 0 15px 0 #c7c7c7;
+}
+
+div.outer-container div.player-1 {
+  background-color: hsl(150, 100%, 70%);
+  box-shadow: inset 0 0 8px 0 hsl(166, 100%, 40%);
+}
+
+div.outer-container div.player-2 {
+  background-color: hsl(0, 100%, 70%);
+  box-shadow: inset 0 0 8px 0 hsl(0, 100%, 40%);
+}
