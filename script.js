@@ -1,6 +1,6 @@
-let squares = Array.from(document.querySelectorAll('.square'));
-let player = 'player-1';
-let used = 0;
+var squares = Array.from(document.querySelectorAll('.square'));
+var player = 'player-1';
+var used = 0;
 squares.forEach((square) => {
   square.addEventListener('click', () => {
     if (!square.classList.contains('used')) {
