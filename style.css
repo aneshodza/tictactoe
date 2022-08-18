@@ -3,7 +3,6 @@
 :root {
   --red: hsl(0, 100%, 70%);
   --red-shadow: hsl(0, 100%, 40%);
-  --red-bg: hsl(0, 45%, 43%);
   --green: hsl(150, 100%, 70%);
   --green-shadow: hsl(166, 100%, 34%);
   --grey: hsl(0, 0%, 78%);
