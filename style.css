@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 body {
   display: flex;
   justify-content: center;
@@ -6,6 +8,7 @@ body {
   height: 100vh;
   margin: 0;
   transition: all 0.2s ease-in-out;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body#player-1 {
@@ -13,11 +16,17 @@ body#player-1 {
 }
 
 body#player-2 {
-  background-color: hsl(0, 100%, 40%);
+  background-color: hsl(0, 100%, 70%);
 }
 
 body#draw {
-  background-color: hsl(0, 0%, 63%);
+  background-color: hsl(0, 0%, 78%);
+}
+
+body#player-1,
+body#player-2,
+body#draw {
+  pointer-events: none;
 }
 
 div.resize-helper {
