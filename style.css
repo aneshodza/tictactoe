@@ -1,23 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+  --red: hsl(0, 100%, 70%);
+  --red-shadow: hsl(0, 100%, 40%);
+  --green: hsl(150, 100%, 70%);
+  --green-shadow: hsl(166, 100%, 34%);
+  --grey: hsl(0, 0%, 78%);
+  --grey-shadow: hsl(0, 0%, 50%);
+  --font-color: hsl(0, 0%, 23%);
+}
+
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 100vh;
   margin: 0;
   transition: all 0.2s ease-in-out;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body#player-1 {
-  background-color: hsl(166, 100%, 40%);
+  background-color: var(--green);
 }
 
 body#player-2 {
-  background-color: hsl(0, 100%, 40%);
+  background-color: var(--red);
 }
 
 body#draw {
-  background-color: hsl(0, 0%, 63%);
+  background-color: var(--grey);
+}
+
+body#player-1 div.resize-helper,
+body#player-2 div.resize-helper,
+body#draw div.resize-helper {
+  pointer-events: none;
 }
 
 div.resize-helper {
@@ -31,7 +51,7 @@ div.resize-helper {
 div.outer-container {
   padding: 20px;
   border-radius: 5%;
-  box-shadow: 0 0 15px 0 #c7c7c7;
+  box-shadow: 0 0 15px 0 var(--grey);
   display: grid;
   aspect-ratio: 1;
   width: 100%;
@@ -44,7 +64,7 @@ div.outer-container {
 }
 
 div.outer-container div {
-  box-shadow: inset 0 0 5px 0 #c7c7c7;
+  box-shadow: inset 0 0 5px 0 var(--grey);
   width: 100%;
   height: 100%;
   padding: 0;
@@ -53,15 +73,73 @@ div.outer-container div {
 }
 
 div.outer-container div:hover {
-  box-shadow: inset 0 0 15px 0 #c7c7c7;
+  box-shadow: inset 0 0 15px 0 var(--grey);
 }
 
 div.outer-container div.player-1 {
-  background-color: hsl(150, 100%, 70%);
-  box-shadow: inset 0 0 8px 0 hsl(166, 100%, 40%);
+  background-color: var(--green);
+  box-shadow: inset 0 0 8px 0 var(--green-shadow);
 }
 
 div.outer-container div.player-2 {
-  background-color: hsl(0, 100%, 70%);
-  box-shadow: inset 0 0 8px 0 hsl(0, 100%, 40%);
+  background-color: var(--red);
+  box-shadow: inset 0 0 8px 0 var(--red-shadow);
+}
+
+div.buttons-resize-helper {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  max-width: 80vh;
+}
+
+div.buttons {
+  width: 100%;
+  max-width: 490px;
+  top: 100px;
+  display: flex;
+  flex-direction: row;
+}
+
+button {
+  font-family: 'Montserrat', sans-serif;
+  border: none;
+  color: var(--font-color);
+  background-color: white;
+  font-size: 24px;
+  border-radius: 5px;
+  padding: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+body#player-1 button {
+  background-color: var(--green);
+}
+
+body#player-1 button:hover {
+  box-shadow: 0 0 10px 0 var(--green-shadow);
+}
+
+body#player-2 button {
+  background-color: var(--red);
+}
+
+body#player-2 button:hover {
+  box-shadow: 0 0 10px 0 var(--red-shadow);
+}
+
+body#draw button {
+  background-color: var(--grey);
+}
+
+body:not(#playing) button {
+  color: white;
+}
+
+button:hover {
+  box-shadow: 0 0 10px 0 var(--grey-shadow);
+  scale: 1.025;
+  cursor: pointer;
 }

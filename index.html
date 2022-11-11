@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
+    <script src="scripts/actions.js"></script>
+    <script src="scripts/win-listener.js" defer type="module"></script>
     <title>Tic tac toe</title>
   </head>
-  <body>
+  <body id="playing">
     <div class="resize-helper">
       <div class="outer-container">
         <div class="square" id="0"></div>
@@ -25,4 +27,9 @@
       </div>
     </div>
   </body>
+  <div class="buttons-resize-helper">
+    <div class="buttons">
+      <button onclick="restart()">clear</button>
+    </div>
+  </div>
 </html>
